@@ -473,6 +473,16 @@ h3 { font-size: var(--fs-h3); }
 .social-list__link {
     padding: .5em;
 }
+     
+.animate-me {
+  opacity: 0; /* Start with transparency to create a fade-in effect */
+  transition: opacity 0.5s; /* Smooth transition for opacity property */
+}
+
+/* CSS for elements with the 'fade-in' class */
+.fade-in {
+  opacity: 1; /* Fully visible, creating the animation effect */
+}
 
 /* work in progress page */ 
 .work_progress_img {
