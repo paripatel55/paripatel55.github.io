@@ -10,10 +10,7 @@ html {
 
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace; 
-    
-     --ff-primary: 'Raleway', sans-serif; /* Change to Raleway */
-    --ff-secondary: 'Source Code Pro', monospace; 
+    --ff-secondary: 'Source Code Pro', sans-serif; 
     
     --fw-reg: 300;
     --fw-bold: 900; 
