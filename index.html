@@ -41,6 +41,17 @@
                 </nav>
                 <a class="cta" href="#contact"><button>Contact</button></a>
             </header>
+
+           <script>
+                window.addEventListener('scroll', () => {
+                  const element = document.querySelector('.animate-me');
+                  const position = element.getBoundingClientRect();
+            
+                  if (position.top < window.innerHeight) {
+                    element.classList.add('fade-in);
+                  }
+                });
+            </script>
                 
                         
             <!-- intro --> 
@@ -55,7 +66,7 @@
         </div>
         
         <!-- My services --> 
-        <section class="my-services" id="Services">
+        <section class="my-services" class="animate-me" id="Services">
             <h2 class="section__title section__title--services">What I do</h2> 
             <div class="services">
                 <div class="service">
@@ -79,7 +90,7 @@
         
         <!--About me -->
         <div class="stylee2">
-            <section class"about_me" id="about">
+            <section class="about_me" class="animate-me" id="about">
                 <a href="#about">
                 <div class="hola">
                     <h2 class="section__title section__title--about">Who I am</h2> 
@@ -123,7 +134,7 @@
                     </div>
                 </div>
             </section>  -->
-            <section class="my-work" id="work">
+            <section class="my-work" class="animate-me" id="work">
                 <h2 class="section__title section__title--work">My Work</h2>
                 <div class="hehe"
                     <p class="section__subtitle section__subtitle--work">A selection of my range of projects</p>
@@ -131,19 +142,19 @@
                 <div class="portfolio">
                     <div class="item">
                         <a href="progress.html" class="portfolio__item"> 
-                            <img src="images/coding_projects" alt="coding section" class="portfolio__img">
+                            <img src="images/bubble_tea.png" alt="coding section" class="portfolio__img">
                         </a>
                     </div>
                         
                     <div class="item">
                         <a href="progress.html" class="portfolio__item"> 
-                            <img src="images/paintingss" alt="art section" class="portfolio__img">
+                            <img src="images/war_game.png" alt="art section" class="portfolio__img">
                         </a>
                     </div>
                         
                     <div class="item">
                         <a href="progress.html" class="portfolio__item"> 
-                            <img src="images/photographyy" alt="photography" class="portfolio__img">
+                            <img src="images/flappy_bird.png" alt="photography" class="portfolio__img">
                         </a>
                     </div>
                 </div> 
