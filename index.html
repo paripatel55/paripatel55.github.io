@@ -1,201 +1,340 @@
-<!doctype html>
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <meta charset="UTF-a"
-        <meta name="viewport"content="width=device-width, initial-scale=1.0">
-        <title>PariPatel Portfolio Website</title> 
-        <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-      
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-            <!-- <header>
-                <div class="logo"> 
-                    <img src="images/logo" alt="pari's name">
-                </div>
-                <button class="nav-toggle"aria-label="toggle navigation">
-                    <span class="humburger"></span>
-                </button>
-                <nav class="nav"
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#"class="nav__link">Home</a></li>
-                        <li class="nav__item"><a href="#"class="nav__link">My services</a></li>     <li class="nav__item"><a href="#"class="nav__link">About me</a></li>
-                        <li class="nav__item"><a href="#"class="nav__link">Projects</a></li>
-                    </ul>
-                </nav>
-            </header>  -->
-            
-            <header> 
-                <img class="logo" src="images/logo" alt="logo">
-                <nav> 
-                    <ul class="nav__links"> 
-                        <li><a href="#Home">Home</a></li>
-                        <li><a href="#Services">Services</a></li>    
-                         <li><a href="#about">About</a></li>
-                        <li><a href="#work">Projects</a></li>
-                    </ul>
-                </nav>
-                <a class="cta" href="#contact"><button>Contact</button></a>
-            </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pari Patel | Software Engineer</title>
+  <meta name="description" content="Pari Patel - Software Engineer, CS Senior at NYU Tandon. Experienced at Disney, Chevron, NASA, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="nav__container">
+      <a href="#home" class="nav__logo">PBP</a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#photography" class="nav__link">Photography</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Get in Touch</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
-           <script>
-                window.addEventListener('scroll', () => {
-                  const element = document.querySelector('.animate-me');
-                  const position = element.getBoundingClientRect();
-            
-                  if (position.top < window.innerHeight) {
-                    element.classList.add('fade-in);
-                  }
-                });
-            </script>
-                
-                        
-            <!-- intro --> 
-         <div class=stylee>
-                <section class="intro" id="Home">
-                    <h1 class="section__title section__title--intro">
-                        Hi, I am <strong>Pari Patel</strong>   
-                    </h1>
-                    <p class="section__subtitle section__subtitle--intro">CS Student @ NYU</p>
-                    <img src="images/paripatel" alt="a profile pic of pari" class="intro__img">
-                </section>
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="mobile-menu__links">
+      <li><a href="#home" class="mobile-menu__link">Home</a></li>
+      <li><a href="#experience" class="mobile-menu__link">Experience</a></li>
+      <li><a href="#about" class="mobile-menu__link">About</a></li>
+      <li><a href="#photography" class="mobile-menu__link">Photography</a></li>
+      <li><a href="#contact" class="mobile-menu__link">Get in Touch</a></li>
+    </ul>
+  </div>
+
+  <!-- Particle Canvas Background -->
+  <canvas id="particles" class="particles-canvas"></canvas>
+
+  <!-- Mouse Glow -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero__content">
+        <span class="hero__label">SOFTWARE ENGINEER</span>
+        <h1 class="hero__title">Hi, I'm <span class="gradient-text">Pari Patel</span></h1>
+        <p class="hero__subtitle">Senior at NYU Tandon &middot; SWE Intern @ Disney</p>
+        <p class="hero__bio">Passionate about building impactful software and exploring new ideas. Seeking new-grad opportunities in software engineering and data. Graduating May 2026.</p>
+        <div class="hero__cta">
+          <a href="#experience" class="btn btn--primary">View Experience</a>
+          <a href="#contact" class="btn btn--outline">Get in Touch</a>
         </div>
-        
-        <!-- My services --> 
-        <section class="my-services" class="animate-me" id="Services">
-            <h2 class="section__title section__title--services">What I do</h2> 
-            <div class="services">
-                <div class="service">
-                    <h3>Web Dev</h3> 
-                    <p>I have applied what I learned in previous coding experiences such as girls who code and fintech focus to build this website along with using the internet and tutorial videos on youtube to add other functions to my website.</p> 
-                </div> <!-- /services -->
-                
-                <div class="servicess"> 
-                    <h3>Software Dev</h3> 
-                    <p>I am making continuous efforts to learn more about front-end and back-end development. My skills are reflected in the current projects I am working on. I hope to get hands on experience working on full-stack.</p>
-                </div> <!-- /services -->
-                
-                <div class="servicesss"> 
-                    <h3>Photography & Paintings</h3> 
-                    <p>Other interests of mine include photography and painting. I especially love taking pictures of sunsets/sunrises and like painting random drawings during my freetime. I also love rock climbing, hiking and running outdoors. :)</p>
-                </div> <!-- /services -->
-            </div> <!-- /services -->
-            
-            <a href="#work" class="btn">My Work</a> 
-        </section> 
-        
-        <!--About me -->
-        <div class="stylee2">
-            <section class="about_me" class="animate-me" id="about">
-                <a href="#about">
-                <div class="hola">
-                    <h2 class="section__title section__title--about">Who I am</h2> 
-                    <p class="section__subtitle section__subtitle--about">A student at NYU tandon aspiring Software Engineer</p> 
-                    <div class="about-me__body">
-                        <p>Hi there! I'm Pari Patel, an undergraduate student at NYU studying computer science. I like building things such as this website but my motivation is fueled by my desire to expand my skillset. </p>
-                        <p>As an aspiring computer scientist, I make an effort to learn more skills through side projects. I am also on the lookout for SWE internship opportunities to apply my current skill-set and dive into real-world applications expanding my horizons through hands-on experience. 
-                           You can find some of my work in my projects section. Please feel free to reach out with any questions/interests using the contact button. </p>
-                    </div> 
-                    <img src="images/paripatel22" alt="pari ice skating" class="about-me__img">
-                </div>
-            </section> 
-        </div> 
-        
-        <!--My Work --> 
-            <!-- <section class="my-work" id="work">
-                <h2 class="section__title section__title--work">My Work</h2>
-                <div class="hehe"
-                    <p class="section__subtitle section__subtitle--work">A selection of my range of projects</p>
-                </div>
-                <div class="design">
-                    <div class="row">
-                        <div class="column">
-                            <a href="#" class="portfolio__item"> 
-                                <img src="images/code.png" alt="coding section" class="portfolio__img">
-                            </a>
-                            <p class="work_edits"><strong> Coding Projects</strong> </p> 
-                        </div>
-                        <div class="column">
-                            <a href="#" class="portfolio__item"> 
-                                <img src="images/art.jpeg" alt="art section" class="portfolio__img">
-                            </a>
-                            <p class="work_edits"><strong>Paintings</strong> </p> 
-                        </div>
-                        <div class="column">
-                            <a href="#" class="portfolio__item"> 
-                                <img src="images/photography.jpeg" alt="photography" class="portfolio__img">
-                            </a>
-                            <p class="work_edits"> <strong>Photography</strong></p> 
-                        </div>
-                    </div>
-                </div>
-            </section>  -->
-            <section class="my-work" class="animate-me" id="work">
-                <h2 class="section__title section__title--work">My Work</h2>
-                <div class="hehe"
-                    <p class="section__subtitle section__subtitle--work">A selection of my range of projects</p>
-                </div>
-                <div class="portfolio">
-                    <div class="item">
-                        <a href="progress.html" class="portfolio__item"> 
-                            <img src="images/bubble_tea.png" alt="coding section" class="portfolio__img">
-                        </a>
-                    </div>
-                        
-                    <div class="item">
-                        <a href="progress.html" class="portfolio__item"> 
-                            <img src="images/war_game.png" alt="art section" class="portfolio__img">
-                        </a>
-                    </div>
-                        
-                    <div class="item">
-                        <a href="progress.html" class="portfolio__item"> 
-                            <img src="images/flabby_bird.png" alt="photography" class="portfolio__img">
-                        </a>
-                    </div>
-                </div> 
-            </section>
+      </div>
+      <div class="hero__image-wrapper">
+        <div class="hero__image-glow"></div>
+        <img src="images/mainPic.jpg" alt="Pari Patel" class="hero__image">
+      </div>
+    </section>
 
-            
-        <!-- Footer -->
-        <footer class="footer" id="contact">
-            <a href="paripatel1515@gmail.com" class="footer__link">paripatel1515@gmail.com</a>
-            <ul class="social-list">
-                <li class="social-list__item">
-                    <a href="https://www.linkedin.com/in/pari-patel-a9b63a20b/" class="social-list__link" target="_blank" rel="noreferrer noopener">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a href="https://docs.google.com/document/d/1hOUQJgjRTudF1zuXzbWkyhH-NUX_YJNdyqXfoCTbfZU/edit" class="social-list__link" target="_blank" rel="noreferrer noopener">
-                        <i class="fab fa-wpforms"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a href="https://github.com/paripatel55" class="social-list__link" target="_blank" rel="noreferrer noopener">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-            </ul>
-        </footer>
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+      <div class="section__container">
+        <span class="section__label">Career</span>
+        <h2 class="section__title">Experience</h2>
 
-        <script src="js/index.js"></script>
+        <!-- Stats Bar -->
+        <div class="exp-stats reveal">
+          <div class="exp-stat">
+            <span class="exp-stat__number" data-count="4">0</span>
+            <span class="exp-stat__label">Internships</span>
+          </div>
+          <div class="exp-stat">
+            <span class="exp-stat__number" data-count="10" data-suffix="+">0</span>
+            <span class="exp-stat__label">Technologies</span>
+          </div>
+          <div class="exp-stat">
+            <span class="exp-stat__number" data-count="4">0</span>
+            <span class="exp-stat__label">States</span>
+          </div>
+        </div>
 
-    </body>  
+        <!-- Horizontal Card Track -->
+        <div class="exp-track" id="exp-track">
+          <!-- Disney -->
+          <div class="exp-card" style="--card-accent: #1a73e8">
+            <div class="exp-card__accent"></div>
+            <div class="exp-card__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h3 class="exp-card__company">The Walt Disney Company</h3>
+            <p class="exp-card__role">Software Engineer Intern</p>
+            <p class="exp-card__date">May 2025 &mdash; Present</p>
+            <p class="exp-card__location"><i class="fa-solid fa-location-dot"></i> New York, NY &middot; Remote</p>
+            <div class="exp-card__skills">
+              <span class="skill-tag">Angular</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">REST APIs</span>
+            </div>
+          </div>
+
+          <!-- Chevron -->
+          <div class="exp-card" style="--card-accent: #e63946">
+            <div class="exp-card__accent"></div>
+            <div class="exp-card__icon"><i class="fa-solid fa-oil-well"></i></div>
+            <h3 class="exp-card__company">Chevron</h3>
+            <p class="exp-card__role">Software Engineer Intern</p>
+            <p class="exp-card__date">May 2024 &mdash; Aug 2024</p>
+            <p class="exp-card__location"><i class="fa-solid fa-location-dot"></i> Houston, TX &middot; On-site</p>
+            <div class="exp-card__skills">
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Qt</span>
+            </div>
+          </div>
+
+          <!-- Pratt & Whitney -->
+          <div class="exp-card" style="--card-accent: #0ea5e9">
+            <div class="exp-card__accent"></div>
+            <div class="exp-card__icon"><i class="fa-solid fa-jet-fighter"></i></div>
+            <h3 class="exp-card__company">Pratt &amp; Whitney</h3>
+            <p class="exp-card__role">Data Science &amp; Analytics Intern</p>
+            <p class="exp-card__date">Jan 2024 &mdash; May 2024</p>
+            <p class="exp-card__location"><i class="fa-solid fa-location-dot"></i> New York, NY &middot; Remote</p>
+            <div class="exp-card__skills">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Neo4j</span>
+              <span class="skill-tag">Cypher</span>
+            </div>
+          </div>
+
+          <!-- NASA -->
+          <div class="exp-card" style="--card-accent: #e03c31">
+            <div class="exp-card__accent"></div>
+            <div class="exp-card__icon"><i class="fa-solid fa-rocket"></i></div>
+            <h3 class="exp-card__company">NASA</h3>
+            <p class="exp-card__role">Data Analytics Research Intern</p>
+            <p class="exp-card__date">May 2023 &mdash; Aug 2023</p>
+            <p class="exp-card__location"><i class="fa-solid fa-location-dot"></i> Huntsville, AL &middot; On-site</p>
+            <div class="exp-card__skills">
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Matplotlib</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="exp-dots" id="exp-dots">
+          <button class="exp-dot active" data-index="0" aria-label="Disney"></button>
+          <button class="exp-dot" data-index="1" aria-label="Chevron"></button>
+          <button class="exp-dot" data-index="2" aria-label="Pratt and Whitney"></button>
+          <button class="exp-dot" data-index="3" aria-label="NASA"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education">
+      <div class="section__container">
+        <span class="section__label">Education</span>
+        <h2 class="section__title">Where I Studied</h2>
+        <div class="education__card reveal reveal--scale">
+          <div class="education__main">
+            <h3 class="education__school">New York University</h3>
+            <p class="education__program">NYU Tandon School of Engineering</p>
+            <p class="education__degree">Bachelor of Science in Computer Science</p>
+            <p class="education__dates">September 2022 &mdash; May 2026</p>
+          </div>
+          <div class="education__extras">
+            <div class="education__orgs">
+              <span class="org-tag">Society of Asian Scientists and Engineers</span>
+              <span class="org-tag">Grace Hopper Conference</span>
+              <span class="org-tag">AnitaB.org</span>
+              <span class="org-tag">Rewriting the Code</span>
+              <span class="org-tag">NYU Running Club</span>
+              <span class="org-tag">NYU Student Government</span>
+              <span class="org-tag">Women in Computing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="section__container about__grid">
+        <div class="about__content reveal reveal--left">
+          <span class="section__label">About Me</span>
+          <h2 class="section__title">A Bit More About Me</h2>
+          <p class="about__text">
+            I'm a senior at New York University studying Computer Science at the Tandon School of Engineering. I'm passionate about exploring new ideas and applying both my technical and interpersonal skills to impactful projects.
+          </p>
+          <p class="about__text">
+            Through internships at Disney, Chevron, NASA, Pratt &amp; Whitney, and NYU Langone Health, I've gained experience across software engineering, data science, and research. I thrive in collaborative environments and love tackling complex problems.
+          </p>
+          <p class="about__text">
+            Outside of tech, I'm an avid runner currently training for the <strong>Brooklyn Half Marathon</strong>. I also love photography &mdash; capturing moments from city life to nature and everything in between.
+          </p>
+        </div>
+        <div class="about__highlights reveal reveal--right">
+          <div class="highlight-card">
+            <i class="fa-solid fa-code"></i>
+            <h4>Builder</h4>
+            <p>5 internships across SWE &amp; data</p>
+          </div>
+          <div class="highlight-card">
+            <i class="fa-solid fa-person-running"></i>
+            <h4>Runner</h4>
+            <p>Training for the Brooklyn Half Marathon</p>
+          </div>
+          <div class="highlight-card">
+            <i class="fa-solid fa-camera"></i>
+            <h4>Photographer</h4>
+            <p>Capturing moments through my lens</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photography Section -->
+    <section class="section photography" id="photography">
+      <div class="section__container">
+        <span class="section__label">Creative</span>
+        <h2 class="section__title">Photography</h2>
+        <p class="section__subtitle">A collection of moments I've captured</p>
+        <div class="gallery">
+          <div class="gallery__item reveal">
+            <img src="images/photo1.png" alt="Washington Square Park at golden hour" loading="lazy">
+            <div class="gallery__overlay"><span>Washington Square Park</span></div>
+          </div>
+          <div class="gallery__item reveal">
+            <img src="images/photo2.jpg" alt="NYC skyline over icy East River" loading="lazy">
+            <div class="gallery__overlay"><span>NYC Skyline</span></div>
+          </div>
+          <div class="gallery__item reveal">
+            <img src="images/photo3.png" alt="Fireworks over water" loading="lazy">
+            <div class="gallery__overlay"><span>Fireworks</span></div>
+          </div>
+          <div class="gallery__item reveal">
+            <img src="images/photo4.png" alt="Waterfall in a lush garden" loading="lazy">
+            <div class="gallery__overlay"><span>Hidden Waterfall</span></div>
+          </div>
+          <div class="gallery__item reveal">
+            <img src="images/photo5.jpg" alt="Golden sunset at the beach" loading="lazy">
+            <div class="gallery__overlay"><span>Golden Hour</span></div>
+          </div>
+          <div class="gallery__item reveal">
+            <img src="images/photo6.png" alt="Flamingos by the water" loading="lazy">
+            <div class="gallery__overlay"><span>Flamingos</span></div>
+          </div>
+          <div class="gallery__item reveal">
+            <img src="images/photo7.png" alt="Brooklyn Bridge at night" loading="lazy">
+            <div class="gallery__overlay"><span>Brooklyn Bridge</span></div>
+          </div>
+          <div class="gallery__item reveal">
+            <img src="images/photo8.png" alt="Autumn hiking trail with fall foliage" loading="lazy">
+            <div class="gallery__overlay"><span>Autumn Trails</span></div>
+          </div>
+          <div class="gallery__item reveal">
+            <img src="images/photo9.png" alt="Expedition Everest at Disney with dramatic clouds" loading="lazy">
+            <div class="gallery__overlay"><span>Expedition Everest</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section class="section recommendations">
+      <div class="section__container">
+        <span class="section__label">Kind Words</span>
+        <h2 class="section__title">Recommendations</h2>
+        <div class="recs__grid">
+          <div class="rec-card reveal">
+            <div class="rec-card__quote">&ldquo;</div>
+            <p class="rec-card__text">
+              I had the pleasure of working with Pari during her internship in the summer of 2024, where she helped us develop a new software plugin for advanced oil &amp; gas well data interpretation. Despite not having a background in earth sciences, Pari grasped the highly complex technical challenges within a short timeframe, digested existing code, and delivered a robust implementation on time. Her strong programming and communication skills, combined with her curiosity, determination and warm personality, made her a joy to work with.
+            </p>
+            <div class="rec-card__author">
+              <div>
+                <strong>Bo Gong</strong>
+                <span>Emerging Tech Advisor at Chevron</span>
+              </div>
+            </div>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-card__quote">&ldquo;</div>
+            <p class="rec-card__text">
+              I had the privilege of managing Pari during her internship at Pratt &amp; Whitney, and I can confidently say she is an exceptional data scientist. Her technical expertise not only made a significant impact on our digital products but also set the stage for long-term success. Pari is a true team player with the qualities of a future leader. She has a bright future ahead, and any organization would be fortunate to have her on their team.
+            </p>
+            <div class="rec-card__author">
+              <div>
+                <strong>Lily Rismay</strong>
+                <span>Digital Program Manager at RTX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="section__container contact__container">
+        <span class="section__label">Contact</span>
+        <h2 class="section__title">Let's Connect</h2>
+        <p class="contact__text">I'm actively seeking new-grad and full-time opportunities in software engineering and data. Feel free to reach out!</p>
+        <a href="mailto:pbp2018@nyu.edu" class="btn btn--primary btn--lg">
+          <i class="fa-solid fa-envelope"></i> pbp2018@nyu.edu
+        </a>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/pari-patel-a9b63a20b/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/paripatel55" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Designed &amp; built by Pari Patel &middot; 2026</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
 </html>
-
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
